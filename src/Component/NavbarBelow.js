@@ -9,6 +9,7 @@ class NavbarBelow extends Component {
             <NavbarBelowWrapper className="row">
                 <div className="col-12 d-flex justify-content-between px-5 py-2">
                     <Link to={"/"} className="nav-link">Home</Link>
+                    <Link to={"/addProduct"} className="nav-link">Add a Product</Link>
                     {/* {!this.props.navbarBelowCategory ? null : this.props.navbarBelowCategory.map((category, index) => {
                         return <Link key={index} to={`/productSection/${category.title}`} className="nav-link">{category.categoryName}</Link>
                     })} */}

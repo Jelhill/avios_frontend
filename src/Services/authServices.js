@@ -12,13 +12,31 @@ class AuthService {
   }
 
   uploadVarieties(data) {
-      console.log("mm", data)
     return axios.post(API_URL + "addVariety", data)
     .then(response => {
       return response.data
     })
   }
 
+  addProduct(data) {
+    return axios.post(API_URL + "addProduct", data)
+    .then(response => {
+      return response.data
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
+  getVarietiesByProductId(id) {
+    return axios.get(API_URL + "productVariety/" + id)
+    .then(response => {
+      return response.data
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
 }
 
 export default new AuthService();

@@ -7,6 +7,7 @@ import Details from "./Component/Details"
 import { Switch, Route, withRouter } from "react-router-dom"
 import ProductSection from './Component/ProductSection';
 import AddVarieyForm from './Component/AddVarieyForm';
+import AddProduct from './Component/AddProduct';
 
 
 class App extends Component {
@@ -17,8 +18,9 @@ class App extends Component {
         <Switch>
             <Route exact path={"/"} component={Home} />    
             <Route exact path={"/addVarietyForm/:productId"} component={AddVarieyForm} />    
-            <Route exact path={"/product/:productId"} component={ProductSection} />    
+            <Route exact path={"/product/:product_id"} component={ProductSection} />    
             <Route exact path={"/productDetails/"} component={Details} />    
+            <Route exact path={"/addProduct"} component={AddProduct} />    
         </Switch>
       </div>
     )

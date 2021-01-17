@@ -27,8 +27,9 @@ function ProductCategories(props)  {
                 return (
                     <Link key={product.id} to={`/product/${product.id}`}>
                         <div key={index} className="category-card">
-                            <img className="category-img" src={product.image} alt="pics"/>
+                            <img className="category-img" src={product.display_image} alt="pics"/>
                             <h3 className="text-center">{product.product_name}</h3>
+                            <Link to={`/product/${product.id}`} className="btn btn-danger view-product">View Product</Link>
                         </div>
                     </Link>
                 )
@@ -41,6 +42,7 @@ function ProductCategories(props)  {
 
 const mapStateToProps = (state) => {  
     const { productReducer } = state 
+    console.log(productReducer.products)
     return {
         products: productReducer.products
     }
